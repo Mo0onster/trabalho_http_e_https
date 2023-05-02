@@ -1,0 +1,14 @@
+FROM node:latest
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm install
+
+ENV NODE_ENV=production
+ENV PORT=443
+ENV SSL_CERT=/app/certificado.crt
+ENV SSL_KEY=/app/chave-privada.key
+
+CMD ["npm", "start"]
