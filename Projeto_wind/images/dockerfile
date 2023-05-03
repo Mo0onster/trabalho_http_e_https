@@ -1,0 +1,5 @@
+FROM nginx
+
+COPY certificado.crt C:/ssl/certificado.crt
+COPY chave-privada.key C:/ssl/chave-privada.key
+COPY nginx.conf C:/nginx/conf/nginx.conf

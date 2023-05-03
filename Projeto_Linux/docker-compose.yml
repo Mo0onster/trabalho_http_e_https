@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3'
 
 http:
   web:
@@ -7,12 +7,9 @@ http:
       - ./templates:/etc/nginx/templates
     ports:
       - "80:80"
-    environment:
-      - NGINX_HOST=foobar.com
-      - NGINX_PORT=80
+
 
 https:
-  app:
-    build: ./image
+    build: ./images
     ports:
       - "443:443"
